@@ -11,5 +11,8 @@ cpp用g++编译之后生成a.out文件
 printenv        打印所有的环境变量
 grep            对结果进行过滤
 
+test.linux
+
+
 
 
