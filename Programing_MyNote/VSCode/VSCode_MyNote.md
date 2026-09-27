@@ -1,7 +1,11 @@
-ctrl+shift+v     shfit to version
+ctrl+shift+v     shift to version
 
 选择行,ctrl+/可以在每一行前面加上#以注释
 
 ctrl+B          打开/关闭侧边栏
+
+ctrl+J          打开/关闭面板
+
+
 
 
