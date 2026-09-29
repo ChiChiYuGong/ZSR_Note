@@ -162,7 +162,7 @@ Although practicality beats purity.
 Errors should never pass silently.
 Unless explicitly silenced.
 In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
+There should be one-- and preferably only one --obvious way to do it.          
 Although that way may not be obvious at first unless you're Dutch.
 Now is better than never.
 Although never is often better than *right* now.
@@ -353,18 +353,156 @@ Python通过缩进让代码更易读
 for语句末尾的冒号指出i下一行是循环的第一行
 遗漏即导致语法错误
 
+### 4.3 创建数值列表
 
+列表适合用于储存数字集合
 
+#### 4.3.1 使用函数range()
 
+可以轻松生成一系列数字
+函数range从指定第一个数字数，直到第二个值停止
+所以不包括第二个数字
 
+如果输出不符合预期，可以尝试加一减一
 
+#### 4.3.2 使用range(创建数字列表)
 
+可以使用list()将range()的结果直接转换为列表
+range()作为list()的参数，输出将为一个数字列表
 
+>>> numbers = list(range(1,6)) 
+>>> print(numbers)
 
+range的参数最后一个可以指定步长
 
+使用函数range()几乎可以创造任何需要的数字集
 
+两个星号(**)代表乘方运算
+此时使用append()方法可以计算完成需要的数字再加进列表中
 
+#### 4.3.3 对数字列表执行简单的统计计算
 
+几个专门处理数字列表的Python函数
+min()
+max()
+sum()
+分别找出数字列表的最大值，最小值和总和
+
+#### 4.3.4 列表解析
+
+*列表解析*将for循环和创造新元素的代码合并成一行，并自动附加新元素
+
+>>> squares = [value**2 for value in range(1,11)] 
+>>> print(squares)
+
+首先指定一个列表名放在左边存放生成的列表
+指定一个左方括号，定义一个表达式，用于生成列表中的值
+编写一个for循环，指定表达式中的变量值的来源
+加上右方括号
+
+此时for循环没有:
+
+创建列表解析可以减少重复性工作
+
+### 4.4 使用列表的一部分
+
+处理列表的部分元素————Python称之为*切片*
+
+#### 4.4.1 切片
+
+创建切片，可以指定使用的第一个元素和最后一个元素的索引
+依旧不包括最后一个元素
+
+>>> players = ['charles', 'martina', 'michael', 'florence', 'eli'] 
+>>> print(players[0:3])
+
+如果没有指定第一个索引，则从头开始
+没有指定第二个索引，则走到末尾
+此时索引也可以用负数表示倒数第几个
+两个索引中用:分开
+
+#### 4.4.2 遍历切片
+
+要遍历列表的部分元素，可以在for循环中使用切片
+
+>>> players = ['charles', 'martina', 'michael', 'florence', 'eli'] 
+>>> print("Here are the first three players on my team:") 
+>>> for player in players[:3]: 
+>>>     print(player.title())
+
+#### 4.4.3 复制列表
+
+复制列表，可创建一个包含这个那个列表的切片，也就是省略两个索引
+
+列表不能直接简单赋值
+否则将两个变量关联到一起
+实质是两个变量指向同一个列表
+
+### 4.5 元组
+
+列表适合存储在运行期间可能变化的数据集
+列表是可修改的
+Python将不能修改的值称为*不可变的*
+不可变的列表称为*元组*
+
+#### 4.5.1 定义元组
+
+元组看起来犹如列表，但使用()而不是[]
+
+定义元组后，可以使用索引访问其元素
+
+>>> dimensions = (200, 50) 
+>>> print(dimensions[0]) 
+>>> print(dimensions[1])
+
+使用方法和访问列表元素方法相同
+
+尝试修改元组的操作是禁止的，不能给元组的元素赋值
+
+#### 4.5.2 遍历元组中的所有值
+
+可以用for循环遍历元组中的所有值
+
+#### 4.5.3 修改元组变量
+
+不能修改元组的元素，但可以给存储元组的变量赋值
+也就是重新创建元组赋值给变量
+
+元组是更简单的数据结构，需要存储的一组值不变可以用元组
+
+###　４.6 设置代码格式
+
+遵循一些格式设置约定
+
+#### 4.6.1 格式设置指南
+
+提出Python语言修改建议需要编写Python改进提案
+PEP(Python Enhancement Proposal)
+PEP8是最古老的之一
+
+#### 4.6.2 缩进
+
+建议每一级缩进都使用四个空格
+通常用TAB缩进
+不要混用制表符和空格
+
+#### 4.6.3 行长
+
+建议每行不超过80字符
+注释行长都不超过70字符
+可以显示一条垂直参考线,帮助遵守不超过行长的约定
+
+#### 4.6.4 空行
+
+空行不影响代码的运行但是影响代码的可读性
+
+#### 4.6.4 其他格式设置指南
+
+### 4.7 小结
+
+## 第五章 if语句
+
+### 5.1 一个简单示例
 
 
 
