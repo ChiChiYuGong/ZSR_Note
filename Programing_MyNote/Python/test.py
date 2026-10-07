@@ -49,6 +49,22 @@ for key, value in alien_0.items():
     print(f"\nKey: {key}")
     print(f"Value: {value}")
 
+
+alien = []
+for alien_number in range(30):
+    new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
+    alien.append(new_alien)
+
+for alien in alien[:5]:
+    print(alien)
+
+
+
+a=[0,1,2,3,4,5,6,7,8,9]
+print(len(a))
 '''
+a =input("tell me something:")
+print(a)
+
 
 
