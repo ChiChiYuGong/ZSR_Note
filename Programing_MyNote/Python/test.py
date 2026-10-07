@@ -25,8 +25,6 @@ alien_0 = {'color': 'green'}
 print(alien_0['color'])
 
 
-'''
-
 alien_0 = {'color': 'green', 'points': 5} 
 print(alien_0) 
 
@@ -39,7 +37,18 @@ print(alien_0)
 
 
 
+alien_0 = {
+    'color': 'green',
+    'points': 5
+}
+print(alien_0['color'])
 
+print(alien_0.items())
 
+for key, value in alien_0.items():
+    print(f"\nKey: {key}")
+    print(f"Value: {value}")
+
+'''
 
 
