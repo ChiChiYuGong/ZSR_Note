@@ -808,8 +808,58 @@ input()接受的参数意思是向用户显示的提示或是说明
 
 #### 7.2.1 使用while循环
 
+> current_number = 1 
+> while current_number <= 5: 
+>  print(current_number) 
+>  current_number += 1
 
+#### 7.2.2 让用户选择何时退出
 
+> prompt = "\nTell me something, and I will repeat it back to you:" 
+> prompt += "\nEnter 'quit' to end the program. " 
+> message = "" 
+> while message != 'quit': 
+>  message = input(prompt)
+ 
+>  if message != 'quit': 
+>  print(message)
+
+#### 7.2.3 使用标志
+
+导致程序结束的时间很多时，如果在一条while语句中检查所有条件会很复杂
+可以定义一个变量，称为*标志*
+充当程序的交通信号灯
+
+#### 7.2.4 使用break退出循环
+
+要立即退出循环可以使用break语句
+用于控制程序流程，控制执行或不执行哪些代码
+在任何Python循环中都可以使用break语句
+
+#### 7.2.5 在循环中使用continue
+
+要返回到循环的开头，并根据条件测试结果决定是否继续执行循环
+用continue语句
+
+#### 7.2.6 避免无限循环
+
+每一个while循环都要有停止的途径
+
+### 7.3 使用while循环来处理列表和字典
+
+在for循环中不应该修改列表，否则Python难以跟踪其中的元素
+要在遍历列表的同时对其修改，可以用while循环
+
+#### 7.3.1 在列表之间移动元素
+
+方法pop()以每次一个的方式从列表末尾删除，并返回其列表元素
+
+#### 7.3.2 删除包含特定值的所有列表元素
+
+用remove函数
+用while循环每次判断对应值是否存在
+
+#### 7.3.3 使用用户输入来填充字典
 
 
 
